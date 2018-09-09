@@ -56,11 +56,12 @@
                 <th>Speciality</th>
                 <th>City</th>
                 <th>State</th>
+                <th>Actions</th>
 
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let docInfo of docInfos">
+              <tr *ngFor="let docInfo of docInfos.content">
                  <td>
                   <div>{{docInfo.fullName}}</div>
                   <div class="small text-muted">
@@ -83,6 +84,14 @@
                   <div>{{docInfo.state}}</div>
                   
                 </td>
+                <td>
+                  <div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
+                    <button type="button" class="btn btn-sm btn-pill btn-primary">Edit</button>
+                    &nbsp;
+                    <button type="button" class="btn btn-sm btn-pill btn-danger">Delete</button>
+                  </div>
+                </td>
+               
               </tr>
             </tbody>
           </table>
