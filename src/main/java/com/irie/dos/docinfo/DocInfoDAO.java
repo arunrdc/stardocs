@@ -2,6 +2,7 @@ package com.irie.dos.docinfo;
 
 import javax.transaction.Transactional;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -14,7 +15,7 @@ import org.springframework.data.repository.CrudRepository;
  * @author netgloo
  */
 @Transactional
-public interface DocInfoDAO extends CrudRepository<DocInfo, Long> {
+public interface DocInfoDAO extends JpaRepository<DocInfo, Long> {
 
- 
+  
 } 
