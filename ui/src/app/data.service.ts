@@ -12,4 +12,12 @@ export class DataService {
     return this.http.get('http://localhost:8080/docs')
   }
 
+  getDocsPage(pageNum){
+    return this.http.get('http://localhost:8080/docs?page='+pageNum)
+  }
+
+  getDocsByCity(city){
+    return this.http.get('http://localhost:8080/docsbycity?city='+city)
+  }
+
 }

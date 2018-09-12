@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -33,18 +34,25 @@ public class DocsInfoController {
 		return docInfoDAO.findAll(pageable);
 
 	}
-
+	@CrossOrigin
 	@GetMapping("/doc/{id}")
 	public DocInfo getDoc(@PathVariable long id) {
 		Optional<DocInfo> doc = docInfoDAO.findById(id);
 		return doc.get();
 	}
-
+	@CrossOrigin
+	@GetMapping("/docsbycity")
+	public Page<DocInfo> getDocs( @RequestParam("city") String  city,@PageableDefault(value = 10, page = 0) Pageable pageable) {
+		System.out.println(city);
+		//Page<DocInfo> doc = docInfoDAO.findById((long)2);
+		return docInfoDAO.findAllDocsByCity(city,pageable);
+	}
+	@CrossOrigin
 	@DeleteMapping("/doc/{id}")
 	public void deleteDoc(@PathVariable long id) {
 		docInfoDAO.deleteById(id);
 	}
-
+	@CrossOrigin
 	@PostMapping("/doc")
 	public ResponseEntity<Object> createDoc(@RequestBody DocInfo doc) {
 		DocInfo savedDoc = docInfoDAO.save(doc);

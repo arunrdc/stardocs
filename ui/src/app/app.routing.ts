@@ -8,6 +8,7 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { DetailsComponent } from './views/details/details.component';
 
 export const routes: Routes = [
   {
@@ -43,7 +44,7 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
-  {
+   {
     path: '',
     component: DefaultLayoutComponent,
     data: {
@@ -61,6 +62,10 @@ export const routes: Routes = [
       {
         path: 'charts',
         loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
+      },
+      {
+        path: 'details',
+        loadChildren: './views/details/details.module#DetailsModule'
       },
       {
         path: 'dashboard',
