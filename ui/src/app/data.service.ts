@@ -20,4 +20,8 @@ export class DataService {
     return this.http.get('http://localhost:8080/docsbycity?city='+city)
   }
 
+  getDocsById(id){
+    return this.http.get('http://localhost:8080/doc/'+id)
+  }
+
 }

@@ -36,7 +36,10 @@ public class DocsInfoController {
 	}
 	@CrossOrigin
 	@GetMapping("/doc/{id}")
+	
+	
 	public DocInfo getDoc(@PathVariable long id) {
+		System.out.println(id);
 		Optional<DocInfo> doc = docInfoDAO.findById(id);
 		return doc.get();
 	}

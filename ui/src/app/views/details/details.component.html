@@ -6,38 +6,53 @@
         <div class="card-header">
          Doctor List
         </div>
-        <div class="card-body">
-          
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" class="form-control" id="company" placeholder="Enter your company name">
-            </div>
-            <div class="form-group">
-              <label for="vat">VAT</label>
-              <input type="text" class="form-control" id="vat" placeholder="PL1234567890">
-            </div>
-            <div class="form-group">
-              <label for="street">Street</label>
-              <input type="text" class="form-control" id="street" placeholder="Enter street name">
-            </div>
-            <div class="row">
-              <div class="form-group col-sm-8">
-                <label for="city">City</label>
-                <input type="text" class="form-control" id="city" placeholder="Enter your city">
+        <br>
+        <div class="row">
+          <div class="col-sm-6 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                Doctor Info
               </div>
-              <div class="form-group col-sm-4">
-                <label for="postal-code">Postal Code</label>
-                <input type="text" class="form-control" id="postal-code" placeholder="Postal Code">
+              <div class="card-body">
+                      <h4>
+                          {{docInfo.fullName}}
+                          </h4>
+                <p>{{docInfo.specialty}}</p>
+                      
+                  <p>{{docInfo.practiceName}}</p>
+                      
+                  <p>{{docInfo.employees}}</p>
+                      
+                  <p>{{docInfo.sales}}</p>
+                      
+                  <p>
+                    <label>SIC Code:  </label> {{docInfo.sicCode}}
+                  </p>
+                  <p>Address</p>
+                  <p> {{docInfo.address}},</p>
+                      <p> {{docInfo.city}},</p>
+                          <p> {{docInfo.state}} {{docInfo.zip}}</p>
+                          
+
+                
+              
+
               </div>
-            </div><!--/.row-->
-            <div class="form-group">
-              <label for="country">Country</label>
-              <input type="text" class="form-control" id="country" placeholder="Country name">
             </div>
-          
-        </div>
-      </div>
-    </div><!--/.col-->
+          </div><!--/.col-->
+          <div class="col-sm-6 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                Location
+              </div>
+              <div class="card-body">
+                  <p>Latitude: {{docInfo.latitude}}</p>
+                      
+                  <p>Longitude: {{docInfo.longitude}}</p>
+              </div>
+            </div>
+          </div><!--/.col-->
   </div><!--/.row-->
+ 
 </div>
 
