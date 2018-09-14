@@ -10,7 +10,8 @@ export class DetailsComponent implements OnInit {
 
   
   docInfo: Object ;
-
+  lat: number = 39.0436;
+  lng: number = -97.3172;
 
   ngOnInit(): void {
     this.getDoc();
@@ -18,9 +19,13 @@ export class DetailsComponent implements OnInit {
   constructor(private data: DataService, private route: ActivatedRoute,) { }
 
   getDoc(): void {
+    console.log('hello');
     const id = +this.route.snapshot.paramMap.get('id');
     this.data.getDocsById(id).subscribe(
-      data => this.docInfo = data 
+      data => this.docInfo = data
+      
     );
+   
+
   }
 }

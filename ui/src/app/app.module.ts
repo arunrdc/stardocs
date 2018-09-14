@@ -19,6 +19,7 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { AgmCoreModule } from '@agm/core';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -55,7 +56,10 @@ import { DetailsComponent } from './views/details/details.component';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBm9oUZkAt3s5AhdSPrT9Ww2enFfiScEXI'
+    })
   ],
   declarations: [
     AppComponent,
