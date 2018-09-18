@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../data.service';
 import { ActivatedRoute } from '@angular/router';
-@Component({
-  selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
-})
-export class DetailsComponent implements OnInit {
+import { DocInfo } from '../../docInfo';
 
-  
-  docInfo: Object ;
-  
-  lat: number = 42.7234;
-  lng: number = -84.4779;
+@Component({
+  selector: 'app-editdetails',
+  templateUrl: './editdetails.component.html',
+  styleUrls: ['./editdetails.component.scss']
+})
+export class EditdetailsComponent implements OnInit {
+  docInfo: DocInfo ;
 
   ngOnInit(): void {
     this.getDoc();
@@ -29,4 +26,13 @@ export class DetailsComponent implements OnInit {
    
 
   }
+
+  saveDoc()
+  {
+    this.data.updateDoc(this.docInfo);
+    console.log('Saved');
+
+  }
+
+  
 }

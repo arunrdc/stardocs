@@ -41,6 +41,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { DetailsComponent } from './views/details/details.component';
+import { EditDoComponent } from './views/edit-do/edit-do.component';
+import { EditdetailsComponent } from './views/editdetails/editdetails.component';
 
 @NgModule({
   imports: [
@@ -67,7 +69,9 @@ import { DetailsComponent } from './views/details/details.component';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditDoComponent
+   
   ],
   providers: [{
     provide: LocationStrategy,

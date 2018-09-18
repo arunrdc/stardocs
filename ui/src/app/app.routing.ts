@@ -64,6 +64,10 @@ export const routes: Routes = [
         loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
       },
       {
+        path: 'editdetails/:id',
+        loadChildren: './views/editdetails/editdetails.module#EditdetailsModule'
+      },
+      {
         path: 'details/:id',
         loadChildren: './views/details/details.module#DetailsModule'
       },

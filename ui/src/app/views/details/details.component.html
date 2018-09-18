@@ -16,10 +16,14 @@
                           </h4>
                           <p>{{docInfo.practiceName}}</p>
                           <b><p>{{docInfo.specialty}}</p></b>
-                            <button type="button" class="btn btn-sm btn-pill btn-primary">Edit Details</button>
+                          <a routerLink="../../editdetails/{{docInfo.id}}"><button type="button" class="btn btn-sm btn-pill btn-primary">Edit Details</button></a>
                             &nbsp;
-                            <button type="button" class="btn btn-sm btn-pill btn-danger">Delete</button>
-                          <div class="card-body">
+                            <button type="button" class="btn btn-sm btn-pill btn-danger">{{docInfo.aoaMembership}}</button>
+                            &nbsp;
+                            <a target="_blank" href="{{docInfo.publications}}"><button type="button" class="btn btn-sm btn-pill btn-primary">View Publications</button></a>
+                    
+                         
+                            <div class="card-body">
                              <agm-map [latitude]="lat" [longitude]="lng">
                               <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
                             </agm-map>
@@ -45,7 +49,7 @@
                           
                      
                  <p><b>Contact:</b> {{docInfo.phone}}</p>
-              
+                 
 
               </div>
             </div>

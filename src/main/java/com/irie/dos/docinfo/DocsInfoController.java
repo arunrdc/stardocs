@@ -1,5 +1,6 @@
 package com.irie.dos.docinfo;
 
+import java.io.FileReader;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
+import com.opencsv.CSVReader;
 @RestController
 public class DocsInfoController {
 	@Autowired
@@ -64,9 +65,11 @@ public class DocsInfoController {
 		return ResponseEntity.created(location).build();
 
 	}
-
+	@CrossOrigin()
 	@PutMapping("/doc/{id}")
-	public ResponseEntity<Object> updateDoc(@RequestBody DocInfo doc, @PathVariable long id) {
+	public ResponseEntity<Object> updateDoc(@PathVariable long id,@RequestBody DocInfo doc) {
+		
+		System.out.println("Inside Update");
 		Optional<DocInfo> docOptional = docInfoDAO.findById(id);
 		if (!docOptional.isPresent())
 			return ResponseEntity.notFound().build();
@@ -74,5 +77,9 @@ public class DocsInfoController {
      	docInfoDAO.save(doc);
 		return ResponseEntity.noContent().build();
 	}
+	
+	
 
 }
+
+

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="doc_db2")
+@Table(name="do_db")
 public class DocInfo implements Serializable{
 	@Id
 	@GeneratedValue
@@ -66,7 +66,23 @@ public class DocInfo implements Serializable{
 	String longitude;
 	@Column(name="Website")
 	String website;
+	@Column(name="Membership")
+	String aoaMembership;
+	@Column(name="Publications")
+	String publications;
 	
+	public String getPublications() {
+		return publications;
+	}
+	public void setPublications(String publications) {
+		this.publications = publications;
+	}
+	public String getAoaMembership() {
+		return aoaMembership;
+	}
+	public void setAoaMembership(String aoaMembership) {
+		this.aoaMembership = aoaMembership;
+	}
 	public String getPracticeName() {
 		return practiceName;
 	}

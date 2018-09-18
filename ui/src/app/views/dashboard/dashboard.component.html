@@ -15,8 +15,8 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </div>
-            <div class="text-value">9.823</div>
-            <div>Members online</div>
+            <div class="text-value">130,729 DOs</div>
+            <div>IRIE DB</div>
           </div>
           <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
             <canvas baseChart class="chart"
@@ -35,8 +35,8 @@
             <button type="button" class="btn btn-transparent p-0 float-right">
               <i class="icon-location-pin"></i>
             </button>
-            <div class="text-value">9.823</div>
-            <div>Members online</div>
+            <div class="text-value">57,677 DOs</div>
+            <div>AOA DB</div>
           </div>
           <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
             <canvas baseChart class="chart"
@@ -62,8 +62,8 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </div>
-            <div class="text-value">9.823</div>
-            <div>Members online</div>
+            <div class="text-value">50,506 DOs</div>
+            <div>AOA EDW Match</div>
           </div>
           <div class="chart-wrapper mt-3" style="height:70px;">
             <canvas baseChart class="chart"
@@ -89,8 +89,8 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </div>
-            <div class="text-value">9.823</div>
-            <div>Members online</div>
+            <div class="text-value">80,223 Candidates</div>
+            <div>Ready for Inclusion</div>
           </div>
           <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
             <canvas baseChart class="chart"
@@ -178,6 +178,7 @@
                 <th>Speciality</th>
                 <th>City</th>
                 <th>State</th>
+                <th>AOA Membership</th>
                 <th>Actions</th>
 
               </tr>
@@ -207,10 +208,12 @@
                   
                 </td>
                 <td>
+                    <div><button type="button" class="btn btn-sm btn-pill btn-danger">{{docInfo.aoaMembership}}</button></div>
+                    
+                  </td>
+                  <td>
                   <div class="col-6 col-sm-4 col-md mb-3 mb-xl-0 text-center">
                     <a routerLink="../details/{{docInfo.id}}"><button type="button" class="btn btn-sm btn-pill btn-primary">View Details</button></a>
-                    &nbsp;
-                    <button type="button" class="btn btn-sm btn-pill btn-danger">Delete</button>
                   </div>
                 </td>
                

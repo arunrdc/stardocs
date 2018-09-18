@@ -20,8 +20,8 @@ export class DashboardComponent implements OnInit {
   constructor(private data: DataService) { }
 
   docInfos: Object ;
-  public pieChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-  public pieChartData: number[] = [300, 500, 100];
+  public pieChartLabels: string[] = ['Members', 'Non-Members'];
+  public pieChartData: number[] = [40, 60];
   public pieChartType = 'pie';
 
   // barChart
@@ -29,13 +29,13 @@ export class DashboardComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartLabels: string[] = ['PA', 'MI', 'FL', 'CA', 'TX'];
   public barChartType = 'bar';
   public barChartLegend = true;
 
   public barChartData: any[] = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+    {data: [5400,5958,3543,3189,2460], label: 'Member'},
+    {data: [7318,5918,5881,5268,5264], label: 'Non-member'}
   ];
 
   public lineChartColours: Array<any> = [
